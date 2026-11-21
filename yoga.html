@@ -484,6 +484,13 @@ const postures = {
 
 function showPosture(id) {
   const p = postures[id];
+    const image = document.getElementById("posture-image");
+  if (p.image) {
+    image.src = p.image;
+    image.style.display = "block";
+  } else {
+    image.style.display = "none";
+  }
   document.getElementById("posture-title").textContent = p.title;
   document.getElementById("posture-description").textContent = p.description;
   document.getElementById("posture-benefits").textContent = p.benefits;
