@@ -278,7 +278,220 @@
     Une bibliothèque pour apprendre à connaître les postures
     et enrichir votre pratique.
   </p>
-  <p>Notre bibliothèque de postures sera bientôt disponible.</p>
+  
+<div class="grid" id="posture-library">
+
+  <article class="card">
+    <div class="symbol">🧘</div>
+    <h3>La posture de l'enfant</h3>
+    <p>Balasana · Débutant</p>
+    <p>Une posture douce pour relâcher le dos et se détendre.</p>
+    <button onclick="showPosture('balasana')">Voir la posture</button>
+  </article>
+
+  <article class="card">
+    <div class="symbol">🌳</div>
+    <h3>L'arbre</h3>
+    <p>Vrksasana · Débutant</p>
+    <p>Développe l'équilibre et la concentration.</p>
+    <button onclick="showPosture('vrksasana')">Voir la posture</button>
+  </article>
+
+  <article class="card">
+    <div class="symbol">🐕</div>
+    <h3>Le chien tête en bas</h3>
+    <p>Adho Mukha Svanasana · Débutant</p>
+    <p>Étire le corps et renforce les bras et les jambes.</p>
+    <button onclick="showPosture('chien')">Voir la posture</button>
+  </article>
+
+  <article class="card">
+    <div class="symbol">🌸</div>
+    <h3>Le cobra</h3>
+    <p>Bhujangasana · Débutant</p>
+    <p>Mobilise doucement la colonne vertébrale.</p>
+    <button onclick="showPosture('cobra')">Voir la posture</button>
+  </article>
+
+  <article class="card">
+    <div class="symbol">🦋</div>
+    <h3>Le papillon</h3>
+    <p>Baddha Konasana · Débutant</p>
+    <p>Favorise l'ouverture douce des hanches.</p>
+    <button onclick="showPosture('papillon')">Voir la posture</button>
+  </article>
+
+  <article class="card">
+    <div class="symbol">⚔️</div>
+    <h3>Le guerrier I</h3>
+    <p>Virabhadrasana I · Intermédiaire</p>
+    <p>Développe la force et la stabilité.</p>
+    <button onclick="showPosture('guerrier1')">Voir la posture</button>
+  </article>
+
+  <article class="card">
+    <div class="symbol">⚔️</div>
+    <h3>Le guerrier II</h3>
+    <p>Virabhadrasana II · Intermédiaire</p>
+    <p>Renforce les jambes et améliore l'ancrage.</p>
+    <button onclick="showPosture('guerrier2')">Voir la posture</button>
+  </article>
+
+  <article class="card">
+    <div class="symbol">🪷</div>
+    <h3>La posture du lotus</h3>
+    <p>Padmasana · Avancé</p>
+    <p>Une posture traditionnelle de méditation.</p>
+    <button onclick="showPosture('lotus')">Voir la posture</button>
+  </article>
+
+  <article class="card">
+    <div class="symbol">🌙</div>
+    <h3>La pince assise</h3>
+    <p>Paschimottanasana · Intermédiaire</p>
+    <p>Étire l'arrière des jambes et le dos.</p>
+    <button onclick="showPosture('pince')">Voir la posture</button>
+  </article>
+
+  <article class="card">
+    <div class="symbol">🌉</div>
+    <h3>Le demi-pont</h3>
+    <p>Setu Bandhasana · Débutant</p>
+    <p>Renforce les fessiers et mobilise le bassin.</p>
+    <button onclick="showPosture('pont')">Voir la posture</button>
+  </article>
+
+  <article class="card">
+    <div class="symbol">🕊️</div>
+    <h3>La posture du pigeon</h3>
+    <p>Eka Pada Rajakapotasana · Intermédiaire</p>
+    <p>Travaille la mobilité des hanches.</p>
+    <button onclick="showPosture('pigeon')">Voir la posture</button>
+  </article>
+
+  <article class="card">
+    <div class="symbol">✨</div>
+    <h3>La posture du cadavre</h3>
+    <p>Savasana · Débutant</p>
+    <p>Favorise le repos et la relaxation.</p>
+    <button onclick="showPosture('savasana')">Voir la posture</button>
+  </article>
+
+</div>
+
+<div id="posture-detail" class="card" style="display:none; margin-top:30px;">
+  <h3 id="posture-title"></h3>
+  <p id="posture-description"></p>
+  <p id="posture-benefits"></p>
+  <p id="posture-steps"></p>
+  <p id="posture-caution"></p>
+  <button onclick="closePosture()">Fermer la fiche</button>
+</div>
+
+<script>
+const postures = {
+  balasana: {
+    title: "Balasana – La posture de l'enfant",
+    description: "À genoux, asseyez-vous sur les talons et inclinez doucement le buste vers l'avant.",
+    benefits: "Bienfaits : détente et relâchement du dos.",
+    steps: "Étapes : posez le front au sol ou sur un support, puis respirez calmement.",
+    caution: "Précaution : adaptez la posture si vos genoux sont sensibles."
+  },
+  vrksasana: {
+    title: "Vrksasana – L'arbre",
+    description: "Debout, placez un pied contre la cheville ou la cuisse opposée, sans appuyer sur le genou.",
+    benefits: "Bienfaits : équilibre et concentration.",
+    steps: "Étapes : fixez un point devant vous et gardez une respiration régulière.",
+    caution: "Précaution : gardez les orteils au sol si l'équilibre est difficile."
+  },
+  chien: {
+    title: "Adho Mukha Svanasana – Le chien tête en bas",
+    description: "Placez les mains et les pieds au sol et soulevez le bassin vers le haut.",
+    benefits: "Bienfaits : renforcement et étirement global.",
+    steps: "Étapes : allongez le dos et pliez les genoux si nécessaire.",
+    caution: "Précaution : adaptez la posture en cas de douleur aux poignets."
+  },
+  cobra: {
+    title: "Bhujangasana – Le cobra",
+    description: "Allongé sur le ventre, placez les mains sous les épaules et soulevez doucement le buste.",
+    benefits: "Bienfaits : mobilité de la colonne et ouverture du thorax.",
+    steps: "Étapes : gardez les coudes près du corps et les épaules basses.",
+    caution: "Précaution : ne forcez pas dans le bas du dos."
+  },
+  papillon: {
+    title: "Baddha Konasana – Le papillon",
+    description: "Assis, rapprochez les plantes des pieds et laissez les genoux s'ouvrir.",
+    benefits: "Bienfaits : mobilité des hanches.",
+    steps: "Étapes : grandissez la colonne et respirez tranquillement.",
+    caution: "Précaution : placez des coussins sous les genoux si besoin."
+  },
+  guerrier1: {
+    title: "Virabhadrasana I – Le guerrier I",
+    description: "Placez un pied devant, l'autre derrière, puis pliez le genou avant.",
+    benefits: "Bienfaits : force et stabilité.",
+    steps: "Étapes : orientez le bassin vers l'avant autant que possible et levez les bras.",
+    caution: "Précaution : évitez de dépasser les limites confortables du genou."
+  },
+  guerrier2: {
+    title: "Virabhadrasana II – Le guerrier II",
+    description: "Écartez les jambes, tournez le pied avant vers l'avant et pliez ce genou.",
+    benefits: "Bienfaits : endurance et ancrage.",
+    steps: "Étapes : ouvrez les bras à l'horizontale et regardez au-dessus de la main avant.",
+    caution: "Précaution : gardez le genou dans l'axe du pied."
+  },
+  lotus: {
+    title: "Padmasana – Le lotus",
+    description: "Assis, les jambes croisées avec les pieds posés sur les cuisses opposées, uniquement si cela est confortable.",
+    benefits: "Bienfaits : stabilité pour la méditation.",
+    steps: "Étapes : asseyez-vous sur un support et gardez la colonne allongée.",
+    caution: "Précaution : ne forcez jamais les genoux. Une assise jambes croisées simple est une alternative."
+  },
+  pince: {
+    title: "Paschimottanasana – La pince assise",
+    description: "Assis, tendez les jambes et inclinez doucement le buste vers l'avant.",
+    benefits: "Bienfaits : étirement de l'arrière des jambes.",
+    steps: "Étapes : partez des hanches et gardez les genoux légèrement fléchis si nécessaire.",
+    caution: "Précaution : ne tirez pas sur les pieds et évitez de forcer le dos."
+  },
+  pont: {
+    title: "Setu Bandhasana – Le demi-pont",
+    description: "Allongé sur le dos, pliez les genoux et soulevez doucement le bassin.",
+    benefits: "Bienfaits : renforcement des fessiers et des jambes.",
+    steps: "Étapes : gardez les pieds parallèles et les épaules au sol.",
+    caution: "Précaution : arrêtez si vous ressentez une douleur au cou ou au dos."
+  },
+  pigeon: {
+    title: "Eka Pada Rajakapotasana – Le pigeon",
+    description: "Depuis une position à quatre pattes, avancez un genou vers l'avant et allongez l'autre jambe derrière vous.",
+    benefits: "Bienfaits : mobilité des hanches.",
+    steps: "Étapes : soutenez la hanche avant avec un coussin si besoin.",
+    caution: "Précaution : ne forcez pas le genou avant. Choisissez une variante sur le dos si nécessaire."
+  },
+  savasana: {
+    title: "Savasana – La posture du cadavre",
+    description: "Allongez-vous sur le dos, les bras et les jambes détendus.",
+    benefits: "Bienfaits : repos et relaxation.",
+    steps: "Étapes : fermez les yeux si vous le souhaitez et laissez la respiration devenir naturelle.",
+    caution: "Précaution : installez un coussin sous les genoux si cela améliore votre confort."
+  }
+};
+
+function showPosture(id) {
+  const p = postures[id];
+  document.getElementById("posture-title").textContent = p.title;
+  document.getElementById("posture-description").textContent = p.description;
+  document.getElementById("posture-benefits").textContent = p.benefits;
+  document.getElementById("posture-steps").textContent = p.steps;
+  document.getElementById("posture-caution").textContent = p.caution;
+  document.getElementById("posture-detail").style.display = "block";
+  document.getElementById("posture-detail").scrollIntoView({behavior:"smooth"});
+}
+
+function closePosture() {
+  document.getElementById("posture-detail").style.display = "none";
+}
+</script>
+
 </section>
 
 <section class="section" id="styles">
