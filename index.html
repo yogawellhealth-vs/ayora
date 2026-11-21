@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AYORA by YogaWellHealth</title>
+<meta name="description" content="AYORA, ton espace de yoga, méditation et bien-être.">
+<style>
+:root {
+  --purple: #512064;
+  --deep: #30113f;
+  --pink: #e8a1c5;
+  --gold: #bd9148;
+  --cream: #fff9f5;
+  --text: #443347;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--text);
+  background: var(--cream);
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 7%;
+  background: white;
+  gap: 20px;
+}
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand img { width: 65px; height: 65px; object-fit: contain; }
+.brand-name { color: var(--purple); font-size: 23px; letter-spacing: 3px; }
+.brand-sub { color: var(--gold); font-size: 12px; letter-spacing: 2px; }
+nav { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; }
+nav a { color: var(--purple); text-decoration: none; font-size: 14px; }
+nav a:hover { color: var(--gold); }
+.hero {
+  text-align: center;
+  padding: 85px 20px 75px;
+  background: radial-gradient(circle at 50% 35%, #fff 0%, #f9e8f0 55%, #ead9ed 100%);
+}
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 12px;
+}
+h1 {
+  color: var(--purple);
+  font-size: clamp(43px, 8vw, 76px);
+  font-weight: normal;
+  margin: 20px 0 12px;
+  letter-spacing: 4px;
+}
+.hero p {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  font-size: 19px;
+  line-height: 1.7;
+}
+.button {
+  display: inline-block;
+  background: var(--purple);
+  color: white;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  letter-spacing: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+.button:hover { background: var(--gold); }
+.section { padding: 65px 7%; text-align: center; }
+.section h2 {
+  color: var(--purple);
+  font-size: 34px;
+  font-weight: normal;
+  margin: 0 0 12px;
+}
+.intro { color: #816c80; margin-bottom: 35px; }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  max-width: 1100px;
+  margin: auto;
+}
+.card {
+  background: white;
+  border: 1px solid #f0dfeb;
+  border-radius: 16px;
+  padding: 30px 15px;
+  box-shadow: 0 8px 25px #5120640c;
+}
+.symbol { font-size: 35px; margin-bottom: 12px; }
+.card h3 { color: var(--purple); font-size: 21px; font-weight: normal; }
+.card p { color: #806f7e; font-size: 14px; line-height: 1.6; }
+.ritual {
+  background: linear-gradient(120deg, #3d174e, #704078);
+  color: white;
+  padding: 65px 20px;
+  text-align: center;
+}
+.ritual h2 { font-size: 34px; font-weight: normal; }
+.ritual p { max-width: 600px; margin: 15px auto 25px; line-height: 1.7; }
+.ritual .button { background: var(--gold); }
+footer {
+  padding: 30px 15px;
+  text-align: center;
+  background: #fff;
+  color: #826e82;
+  font-size: 13px;
+}
+footer strong { color: var(--purple); }
+@media(max-width: 750px) {
+  header { flex-direction: column; }
+  nav { justify-content: center; gap: 14px; }
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .hero { padding: 60px 18px; }
+}
+@media(max-width: 420px) {
+  .cards { grid-template-columns: 1fr; }
+  .brand-name { font-size: 19px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <img src="./LogoYogaWellHealth.png" alt="Logo YogaWellHealth">
+    <div>
+      <div class="brand-name">AYORA</div>
+      <div class="brand-sub">by YogaWellHealth</div>
+    </div>
+  </div>
+  <nav>
+    <a href="#univers">Nos univers</a>
+    <a href="#rituel">Mon rituel</a>
+    <a href="#apropos">Notre philosophie</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="eyebrow">Corps · Esprit · Équilibre</div>
+    <h1>Bienvenue chez AYORA</h1>
+    <p>Un espace pour ralentir, prendre soin de toi et retrouver ton équilibre intérieur, à ton rythme.</p>
+    <a class="button" href="#univers">DÉCOUVRIR MON UNIVERS</a>
+  </section>
+
+  <section class="section" id="univers">
+    <h2>Explore tes univers</h2>
+    <p class="intro">Chaque jour, une nouvelle occasion de prendre soin de toi.</p>
+    <div class="cards">
+      <article class="card">
+        <div class="symbol">🧘‍♀️</div>
+        <h3>Yoga</h3>
+        <p>Des pratiques douces ou dynamiques pour habiter pleinement ton corps.</p>
+      </article>
+      <article class="card">
+        <div class="symbol">🪷</div>
+        <h3>Méditation</h3>
+        <p>Des moments de calme pour apaiser ton esprit et te recentrer.</p>
+      </article>
+      <article class="card">
+        <div class="symbol">🌙</div>
+        <h3>Respiration</h3>
+        <p>Des exercices guidés pour retrouver ton souffle et ralentir.</p>
+      </article>
+      <article class="card">
+        <div class="symbol">✨</div>
+        <h3>Spiritualité</h3>
+        <p>Explore les rituels, les intentions et le chemin de la connaissance de soi.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="ritual" id="rituel">
+    <div class="eyebrow">Ton rendez-vous avec toi-même</div>
+    <h2>Accorde-toi une pause</h2>
+    <p>Quelques minutes suffisent pour commencer à créer un rituel qui te ressemble. Respire, relâche et reconnecte-toi à l'essentiel.</p>
+    <a class="button" href="#univers">DÉCOUVRIR LES PRATIQUES</a>
+  </section>
+
+  <section class="section" id="apropos">
+    <h2>Un chemin vers l'équilibre</h2>
+    <p class="intro">AYORA by YogaWellHealth t'accompagne dans une approche globale du bien-être : le corps, l'esprit et l'équilibre intérieur.</p>
+  </section>
+</main>
+
+<footer>
+  <strong>AYORA by YogaWellHealth</strong>
+  <p>Corps · Esprit · Équilibre</p>
+  <p>© 2026 AYORA — Tous droits réservés</p>
+</footer>
+
+</body>
+</html>
