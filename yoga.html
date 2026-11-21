@@ -1,1 +1,339 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#30113f">
+  <title>Yoga | AYORA by YogaWellHealth</title>
+
+  <style>
+    :root {
+      --purple: #512064;
+      --deep: #30113f;
+      --pink: #e8a1c5;
+      --gold: #bd9148;
+      --cream: #fff9f5;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Georgia, serif;
+      background: var(--cream);
+      color: var(--deep);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--deep);
+      color: white;
+      padding: 22px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .brand {
+      font-size: 28px;
+      letter-spacing: 4px;
+      color: var(--pink);
+    }
+
+    .brand small {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--gold);
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 85px 20px;
+      background: linear-gradient(135deg, #30113f, #512064);
+      color: white;
+    }
+
+    .hero p {
+      color: var(--pink);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 62px);
+      font-weight: normal;
+      margin-bottom: 18px;
+    }
+
+    .hero .intro {
+      max-width: 620px;
+      margin: auto;
+      color: #f8eaf3;
+      font-size: 17px;
+    }
+
+    .section {
+      padding: 65px 8%;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 34px;
+      font-weight: normal;
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      max-width: 650px;
+      margin: 0 auto 35px;
+      color: #705d75;
+    }
+
+    .gold-line {
+      width: 65px;
+      height: 2px;
+      background: var(--gold);
+      margin: 18px auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+      margin-top: 35px;
+    }
+
+    .card {
+      background: white;
+      padding: 32px 22px;
+      border-radius: 14px;
+      border: 1px solid #f0dfeb;
+      box-shadow: 0 8px 25px rgba(48,17,63,0.06);
+      transition: transform .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .symbol {
+      font-size: 35px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      color: var(--purple);
+      font-size: 21px;
+      margin-bottom: 10px;
+      font-weight: normal;
+    }
+
+    .card p {
+      color: #705d75;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .card a {
+      display: inline-block;
+      color: var(--purple);
+      border: 1px solid var(--gold);
+      padding: 9px 18px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .card a:hover {
+      background: var(--purple);
+      color: white;
+    }
+
+    .quote {
+      background: #f5e9f1;
+      padding: 55px 20px;
+      text-align: center;
+      font-size: 23px;
+      font-style: italic;
+      color: var(--purple);
+    }
+
+    footer {
+      background: var(--deep);
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: var(--pink);
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+
+      .section {
+        padding: 45px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+    AYORA
+    <small>BY YOGAWELLHEALTH</small>
+  </div>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="#univers">Nos pratiques</a>
+    <a href="#programmes">Programmes</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <p>AYORA · L'art de prendre soin de soi</p>
+  <h1>Bienvenue dans l'univers Yoga</h1>
+  <div class="gold-line"></div>
+  <div class="intro">
+    Retrouvez le plaisir de bouger, de respirer et de vous reconnecter
+    à vous-même grâce à une pratique adaptée à votre rythme.
+  </div>
+</section>
+
+<section class="section" id="univers">
+  <h2>Explorez votre pratique</h2>
+  <div class="gold-line"></div>
+  <p class="section-intro">
+    Que vous débutiez ou que vous pratiquiez déjà le yoga,
+    découvrez les ressources qui vous accompagneront au quotidien.
+  </p>
+
+  <div class="grid">
+
+    <article class="card">
+      <div class="symbol">🧘</div>
+      <h3>Postures de yoga</h3>
+      <p>Découvrez les postures, leurs bienfaits et leurs adaptations.</p>
+      <a href="#postures">Découvrir</a>
+    </article>
+
+    <article class="card">
+      <div class="symbol">🌸</div>
+      <h3>Styles de yoga</h3>
+      <p>Explorez différentes approches et trouvez celle qui vous correspond.</p>
+      <a href="#styles">Explorer</a>
+    </article>
+
+    <article class="card">
+      <div class="symbol">✨</div>
+      <h3>Séances guidées</h3>
+      <p>Accordez-vous un moment de pratique à votre rythme.</p>
+      <a href="#seances">Découvrir</a>
+    </article>
+
+    <article class="card">
+      <div class="symbol">💜</div>
+      <h3>Programmes</h3>
+      <p>Avancez progressivement avec des parcours de 7, 14 et 21 jours.</p>
+      <a href="#programmes">Explorer</a>
+    </article>
+
+  </div>
+</section>
+
+<section class="section" id="postures">
+  <h2>La bibliothèque des postures</h2>
+  <div class="gold-line"></div>
+  <p class="section-intro">
+    Une bibliothèque pour apprendre à connaître les postures
+    et enrichir votre pratique.
+  </p>
+  <p>Notre bibliothèque de postures sera bientôt disponible.</p>
+</section>
+
+<section class="section" id="styles">
+  <h2>Les styles de yoga</h2>
+  <div class="gold-line"></div>
+  <p class="section-intro">
+    Du yoga doux au yoga dynamique, chaque style répond à des besoins différents.
+  </p>
+  <p>Découvrez prochainement les différentes pratiques.</p>
+</section>
+
+<section class="section" id="seances">
+  <h2>Vos séances guidées</h2>
+  <div class="gold-line"></div>
+  <p class="section-intro">
+    Des séances pour vous accompagner dans votre quotidien.
+  </p>
+  <p>Les séances guidées seront ajoutées prochainement.</p>
+</section>
+
+<section class="section" id="programmes">
+  <h2>Vos programmes Yoga</h2>
+  <div class="gold-line"></div>
+  <p class="section-intro">
+    Construisez votre régularité et progressez à votre rythme.
+  </p>
+
+  <div class="grid">
+    <article class="card">
+      <h3>7 jours</h3>
+      <p>Pour découvrir ou reprendre le yoga en douceur.</p>
+    </article>
+
+    <article class="card">
+      <h3>14 jours</h3>
+      <p>Pour installer une nouvelle routine.</p>
+    </article>
+
+    <article class="card">
+      <h3>21 jours</h3>
+      <p>Pour approfondir votre pratique.</p>
+    </article>
+  </div>
+</section>
+
+<div class="quote">
+  « Le yoga est un chemin vers soi, un souffle après l'autre. »
+</div>
+
+<footer>
+  <p>AYORA by YogaWellHealth</p>
+  <p>Votre espace de bien-être et d'épanouissement</p>
+  <p><a href="index.html">Retour à l'accueil</a></p>
+</footer>
+
+</body>
+</html>
+
